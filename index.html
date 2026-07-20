@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index,follow" />
+    <title>Delete your StudyTrack account</title>
+    <meta
+      name="description"
+      content="Request permanent deletion of your StudyTrack account and associated study data."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <a class="brand" href="/" aria-label="StudyTrack home">StudyTrack</a>
+      <section class="card" aria-labelledby="page-title">
+        <p class="eyebrow">ACCOUNT AND DATA</p>
+        <h1 id="page-title">Delete your StudyTrack account</h1>
+        <p class="lead">
+          This page lets you permanently delete your StudyTrack account without
+          reinstalling the Android app.
+        </p>
+
+        <div class="notice">
+          <h2>What will be deleted</h2>
+          <p>
+            Your profile, exam goals, availability, resources, plans, tasks,
+            study sessions, practice-test results, mistake records, notification
+            preferences and subscription access cache.
+          </p>
+        </div>
+        <div class="notice warning">
+          <h2>Google Play subscription</h2>
+          <p>
+            Account deletion does not automatically cancel an active Google Play
+            subscription. Cancel it separately in Google Play to stop future
+            billing.
+          </p>
+          <a href="https://play.google.com/store/account/subscriptions"
+            >Manage subscriptions</a
+          >
+        </div>
+
+        <form id="email-form">
+          <label for="email">Account email</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            required
+          />
+          <p class="help">
+            We will send a secure sign-in link to verify account ownership.
+          </p>
+          <button type="submit">Send verification link</button>
+        </form>
+
+        <form id="delete-form" hidden>
+          <label for="confirmation"
+            >Type <strong>DELETE</strong> to confirm</label
+          >
+          <input
+            id="confirmation"
+            name="confirmation"
+            type="text"
+            autocomplete="off"
+            spellcheck="false"
+            required
+          />
+          <label class="check">
+            <input id="understood" type="checkbox" required />
+            <span
+              >I understand that this action is permanent and cannot be
+              undone.</span
+            >
+          </label>
+          <button class="danger" type="submit" disabled>
+            Permanently delete my account
+          </button>
+        </form>
+
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+        <noscript
+          >JavaScript is required to verify ownership and submit this
+          request.</noscript
+        >
+      </section>
+      <footer>
+        <span
+          >Independent study-planning tool. Not affiliated with College
+          Board.</span
+        >
+        <a id="support-link" href="#">Contact support</a>
+      </footer>
+    </main>
+    <script src="./config.js"></script>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
