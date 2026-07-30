@@ -13,4 +13,4 @@ Before deployment:
 7. Test email verification, deletion, expired links, wrong confirmation, disallowed origins, active Google Play subscription messaging and mobile accessibility.
 8. Put the exact deployed URL in Google Play Console's account-deletion field and privacy policy.
 
-The publishable key is designed for public clients. Never put the service-role key, RevenueCat secret, Sentry auth token or Google Play service-account credentials in `config.js`.
+The publishable key is designed for public clients. Never put the service-role key, Sentry auth token or Google Play service-account credentials in `config.js`.
